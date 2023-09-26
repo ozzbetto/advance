@@ -23,7 +23,7 @@ export const promiseComponent = ( element ) => {
 
 /**
  * 
- * @param {String} id 
+ * @param {String} id
  * @returns {Promise}
  */
 const findHero = (id) => {
