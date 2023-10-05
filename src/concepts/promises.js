@@ -9,6 +9,13 @@ export const promiseComponent = ( element ) => {
         element.innerHTML = hero.name;
     }
 
+    const renderTwoHeroes = (hero1, hero2) => {
+        element.innerHTML = `
+            <h3>${hero1.name}</h3>
+            <h3>${hero2.name}</h3>
+        `;
+    }
+
     const renderError = (error) => {
         element.innerHTML = `
             <h1>Error:</h1>
@@ -16,8 +23,19 @@ export const promiseComponent = ( element ) => {
     }
 
     const id1 = '5d86371f233c9f2425f16916';
+    const id2 = '5d86371f2343e37870b91ef1';
+
+    let hero1,hero2;
     findHero(id1)
-        .then(renderHero)
+        .then((hero) => {
+            hero1 = hero;
+
+            findHero(id2)
+            .then(hero2 => {
+                renderTwoHeroes(hero1, hero2);
+            })
+            .catch(error => renderError(error));
+        })
         .catch(error => renderError(error));
 }
 
