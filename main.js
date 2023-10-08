@@ -5,6 +5,7 @@ import { environmentsComponents } from './src/concepts/01-enviroments';
 import { callbacksComponent } from './src/concepts/callbacks';
 import { promiseComponent } from './src/concepts/promises';
 import { asycComponent } from './src/concepts/async';
+import { asyncAwaitComponent } from './src/concepts/async-await';
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -27,4 +28,5 @@ const element = document.querySelector('.card');
 // callbacksComponent  ( element );
 // promiseComponent(element);
 // promiseComponent(element);
-asycComponent(element);
+// asycComponent(element);
+asyncAwaitComponent(element);
