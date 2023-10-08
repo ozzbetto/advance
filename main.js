@@ -24,6 +24,6 @@ const element = document.querySelector('.card');
 
 // environmentsComponents( element );
 // callbacksComponent  ( element );
+// promiseComponent(element);
 promiseComponent(element);
-
 
